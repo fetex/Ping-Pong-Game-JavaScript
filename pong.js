@@ -83,7 +83,7 @@ function getMousePos(evt){
 function resetBall(){
     ball.x = canvas.width/2;
     ball.y = canvas.height/2;
-    ball.velocityX = -ball.velocityX;
+    ball.velocityX = ball.velocityX;
     ball.speed = 7;
 }
 
@@ -201,9 +201,17 @@ function game(){
     update();
     render();
 }
-// number of frames per second
-let framePerSecond = 50;
+
+// VELOCIDAD DEL JUEGO
+
+// number of frames/pixeles per second
+let framePerSecond = 40; 
 
 //call the game function 50 times every 1 Sec
 let loop = setInterval(game,1000/framePerSecond);
 
+
+
+/// Decidir la velocidad del pong por el jugador
+/// Niveles - cambiar la velocidad, cada 20 puntos aumenta el nivel
+// al objeto jugador añadir el nombre 
